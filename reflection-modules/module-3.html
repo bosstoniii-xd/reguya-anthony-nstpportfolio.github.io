@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NSTP-CWTS Portfolio of Anthony Reguya — Institute of Computing, Davao del Norte State College. Personal reflections on citizenship, leadership, and nation-building.">
+  <meta name="theme-color" content="#0f766e">
+  <meta name="author" content="Anthony Reguya">
+
+  <meta property="og:title" content="Anthony Reguya — NSTP Portfolio">
+  <meta property="og:description" content="A student portfolio from the National Service Training Program (CWTS) at Davao del Norte State College, integrating IT skills with civic responsibility.">
+  <meta property="og:type" content="website">
+
+  <title>MODULE 3 | My NSTP Personal Portfolio</title>
+  <link rel="stylesheet" href="../css/styles.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">NSTP | PERSONAL PORTFOLIO</span>
+      </a>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>MODULE <span>3</span></h1>
+          <p class="hero-role">Drug and Substance Abuse Prevention and Control</p>
+        </div>
+      </div>
+    </section>
+    <section class="section reflection">
+      <div class="container">
+        <article class="reflection-card module-article">
+          <div class="reflection-inner">
+            <p class="lead">
+              Understanding RA 9165. The real costs of substance abuse made me more determined to take care of myself and to help create a community where young people help each other. Prevention is a shared duty.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div>
+          <strong>ANTHONY REGUYA</strong>
+          <span>NSTP Personal Portfolio · 1st Semester</span>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>Institute of Computing · Davao del Norte State College</p>
+        <p>New Visayas, Panabo City</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  const match = location.pathname.match(/module-(\d+)\.html$/i);
+  const card = document.querySelector(".reflection-card");
+
+  if (match && card) {
+    const current = Number(match[1]);
+    const nav = document.createElement("nav");
+    nav.className = "floating-page-nav";
+    nav.setAttribute("aria-label", "Module navigation");
+
+    if (current > 1) {
+      nav.insertAdjacentHTML("beforeend",
+        `<a href="module-${current - 1}.html">← Previous</a>`);
+    }
+
+    nav.insertAdjacentHTML("beforeend", '<a href="../index.html">Home</a>');
+
+    if (current < 10) {
+      nav.insertAdjacentHTML("beforeend",
+        `<a href="module-${current + 1}.html">Next →</a>`);
+    }
+
+    card.append(nav);
+  }
+</script>
+</body>
+</html>
